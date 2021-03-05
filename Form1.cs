@@ -30,11 +30,17 @@ namespace _04_Domingos_Ribeiro_Listas2
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if (textBox2.Text == "")
+            {
+                //MessageBox.Show("Como não tem nada digitado... \nNão é possível remover nada!");
+                return;
+            }
+
             //Trazer para a variavel S o que estiver na textbox
             string S = textBox2.Text;
 
             //Contar os nomes identicos da lista
-            int limiteSuperior = listBox1.Items.Count - 1;
+            int limiteSuperior = listBox1.Items.Count;
 
             for (int i = 0; i < limiteSuperior; i++)
             {
@@ -42,6 +48,8 @@ namespace _04_Domingos_Ribeiro_Listas2
                 {
                     listBox1.Items[i] = "--------------> REMOVIDO";
                 }
+
+               
 
             }
 
@@ -118,6 +126,21 @@ namespace _04_Domingos_Ribeiro_Listas2
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                 listBox1.Items.Remove(listBox1.Items[listBox1.SelectedIndex]);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Por favor Selecione um Nome na Lista.");
+                return;
+            }
+
+          
         }
     }
 }
