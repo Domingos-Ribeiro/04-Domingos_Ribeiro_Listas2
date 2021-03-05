@@ -72,6 +72,7 @@ namespace _04_Domingos_Ribeiro_Listas2
             this.button1.TabIndex = 2;
             this.button1.Text = "Insere Nome";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox2
             // 
@@ -88,19 +89,20 @@ namespace _04_Domingos_Ribeiro_Listas2
             this.button2.TabIndex = 2;
             this.button2.Text = "Remove Nome";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(29, 102);
+            this.textBox3.Location = new System.Drawing.Point(30, 115);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(198, 20);
+            this.textBox3.Size = new System.Drawing.Size(104, 20);
             this.textBox3.TabIndex = 1;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(29, 128);
+            this.textBox4.Location = new System.Drawing.Point(30, 141);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(198, 20);
+            this.textBox4.Size = new System.Drawing.Size(105, 20);
             this.textBox4.TabIndex = 1;
             // 
             // button3
@@ -111,6 +113,7 @@ namespace _04_Domingos_Ribeiro_Listas2
             this.button3.TabIndex = 2;
             this.button3.Text = "Altera Nome";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // listBox1
             // 
@@ -161,8 +164,9 @@ namespace _04_Domingos_Ribeiro_Listas2
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(97, 69);
             this.button5.TabIndex = 4;
-            this.button5.Text = "Limpar as caixas de leitura";
+            this.button5.Text = "Inicializar listBox com vários nomes";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -170,8 +174,9 @@ namespace _04_Domingos_Ribeiro_Listas2
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(97, 69);
             this.button6.TabIndex = 4;
-            this.button6.Text = "Limpar as caixas de leitura";
+            this.button6.Text = "Elimina todos os nomes";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
@@ -179,7 +184,7 @@ namespace _04_Domingos_Ribeiro_Listas2
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(97, 69);
             this.button7.TabIndex = 4;
-            this.button7.Text = "Limpar as caixas de leitura";
+            this.button7.Text = "Remove item selecionado";
             this.button7.UseVisualStyleBackColor = true;
             // 
             // button8
@@ -188,7 +193,7 @@ namespace _04_Domingos_Ribeiro_Listas2
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(97, 69);
             this.button8.TabIndex = 4;
-            this.button8.Text = "Limpar as caixas de leitura";
+            this.button8.Text = "Copia Lista 1 para a Lista 2";
             this.button8.UseVisualStyleBackColor = true;
             // 
             // Form1
