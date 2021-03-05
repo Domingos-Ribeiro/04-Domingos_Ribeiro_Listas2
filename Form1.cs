@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace _04_Domingos_Ribeiro_Listas2
 {
@@ -62,7 +63,61 @@ namespace _04_Domingos_Ribeiro_Listas2
 
         private void button3_Click(object sender, EventArgs e)
         {
-           
+            if (textBox3.Text == "" || textBox4.Text == "")
+            {
+                MessageBox.Show("Por favor preencha o Nome da Lista e o Nome a Entrar!");
+                return;
+            }
+
+            
+
+            DialogResult opcao = new DialogResult();
+            Thread.Sleep(500);
+            opcao = MessageBox.Show("Caso o nome exista na Lista, a troca será Permanente. \nDeseja continuar? ", "Atenção!", MessageBoxButtons.YesNo , MessageBoxIcon.Warning);
+            if (opcao == DialogResult.Yes)
+            {
+                if (listBox1.Items.Contains(textBox3.Text) == true) // verificar se o nome na textbox existe na listbox com opção contains
+                {
+                    int posicaoNome; // declarar a variável para que possamos manipular a lista
+                    posicaoNome = listBox1.Items.IndexOf(textBox3.Text); // com o indexOf, vamos guardar a posição e onde vai ficar guardado em nome
+
+                    listBox1.Items[posicaoNome] = textBox4.Text;// aqui substituimos a variavel nome pelo que está na textbox inserir
+
+                    
+
+                    Thread.Sleep(2000);
+
+                    MessageBox.Show("O nome " + textBox3.Text + " foi subtituído por: " + textBox4.Text, "Operação efetuada com sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+               }
+                else
+                {
+                    Thread.Sleep(1500);
+                    MessageBox.Show("O nome " + textBox3.Text + " não foi encontrado na Lista 1" + "\n \n" + "Nota: Verifique as letras Maiúsculas e Minúsculas.", "Erro!", MessageBoxButtons.OK , MessageBoxIcon.Error);
+                }
+
+
+            }
+
+            
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            //Copiar todos os nomes da lista 1 para a lista 2
+            listBox2.Items.AddRange(listBox1.Items);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
